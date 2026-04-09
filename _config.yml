@@ -1,0 +1,30 @@
+title: Rose Carcaillet
+description: >-
+  BEng Aerospace Engineering student at Queen Mary University of London,
+  passionate about spacecraft systems engineering.
+author: Rose Carcaillet
+email: rose.carcaillet@gmail.com
+url: "https://rose-31330.github.io"
+baseurl: ""
+
+linkedin_username: rcarc
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Navigation pages
+header_pages:
+  - index.md
+  - projects.md
+  - blog.md
+  - contact.md
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - .gitignore
