@@ -182,18 +182,18 @@ a {
    ============================================================ */
 .btn {
   display: inline-block;
-  background: $color-blue;
-  color: #fff;
+  background: transparent;
+  color: $color-accent;
   padding: 0.6rem 1.6rem;
-  border: 2px solid $color-blue;
+  border: 2px solid $color-accent;
   font-family: $font-heading;
   font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   text-decoration: none;
-  transition: background 0.2s, border-color 0.2s;
-  &:hover { background: darken(#2e5070, 8%); border-color: darken(#2e5070, 8%); color: #fff; text-decoration: none; }
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+  &:hover { background: $color-blue; border-color: $color-blue; color: #fff; text-decoration: none; }
 }
 
 /* ============================================================
