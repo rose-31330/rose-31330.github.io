@@ -1,12 +1,9 @@
 ---
 layout: page
 title: Projects & Experience
+subtitle: Filter by category to explore my work
 permalink: /projects/
 ---
-
-<div class="page-content">
-  <h1 class="page-title">Projects &amp; Experience</h1>
-  <p class="page-subtitle">Filter by category to explore my work</p>
 
   <div class="filter-bar">
     <button class="filter-btn active" data-filter="all">All</button>
@@ -118,7 +115,6 @@ permalink: /projects/
     </div>
 
   </div>
-</div>
 
 <script>
   const buttons = document.querySelectorAll('.filter-btn');

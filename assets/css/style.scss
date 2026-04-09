@@ -7,24 +7,24 @@
 $font-heading:   'Rajdhani', 'Helvetica Neue', sans-serif;
 $font-body:      'Exo 2', 'Helvetica Neue', sans-serif;
 
-/* Colours drawn from 1950s–60s space travel poster palette */
-$color-bg:        #ddd5be;   /* warm parchment (was name colour) */
-$color-bg-card:   #cec6af;   /* slightly darker card surface     */
+$color-bg:        #ddd5be;   /* warm parchment                   */
+$color-bg-card:   #cec6af;   /* card surface                     */
 $color-bg-raised: #c8bfa8;   /* raised surfaces                  */
-$color-text:      #0b1d2a;   /* deep navy (was background)       */
-$color-subtle:    #3a5060;   /* readable muted blue on light bg  */
+$color-text:      #0b1d2a;   /* deep navy                        */
+$color-subtle:    #3a5060;   /* muted blue-grey for secondary text*/
 $color-border:    #a89e88;   /* warm mid-tone border             */
-$color-accent:    #1e8a80;   /* deeper teal, readable on cream   */
+$color-accent:    #1e8a80;   /* teal — primary accent            */
 $color-accent-h:  #156a62;   /* teal hover                       */
-$color-gold:      #8a6a10;   /* darker gold, readable on cream   */
-$color-warm:      #a05a20;   /* darker orange, readable on cream */
-$color-pale:      #2a5060;   /* dark blue for chips on light bg  */
+$color-gold:      #8a6a10;   /* atomic-age gold                  */
+$color-warm:      #a05a20;   /* dusty orange                     */
+$color-blue:      #2e5070;   /* muted steel blue — second accent */
+$color-blue-faint: rgba(46,80,112,0.10);
 
-/* Header/footer stay dark — separate variables */
-$color-header-bg: #050c14;
+/* Header/footer stay dark */
+$color-header-bg:     #050c14;
 $color-header-border: #3aafa0;
-$color-nav-text:  #a8c8d0;
-$color-nav-active: #ffffff;
+$color-nav-text:      #a8c8d0;
+$color-nav-active:    #ffffff;
 
 $max-width: 820px;
 
@@ -40,8 +40,7 @@ body {
   font-weight: 300;
   color: $color-text;
   background: $color-bg;
-  line-height: 1.75;
-  /* subtle warm vignette */
+  line-height: 1.6;
   background-image:
     radial-gradient(ellipse at 50% 0%, rgba(30,138,128,0.06) 0%, transparent 60%);
 }
@@ -51,7 +50,7 @@ img { max-width: 100%; height: auto; display: block; }
 a {
   color: $color-accent;
   text-decoration: none;
-  &:hover { color: $color-gold; text-decoration: none; }
+  &:hover { color: $color-gold; }
 }
 
 /* ============================================================
@@ -108,7 +107,7 @@ a {
   width: 100%;
   max-height: 340px;
   overflow: hidden;
-  border-bottom: 2px solid $color-accent;
+  border-bottom: 2px solid $color-header-border;
   position: relative;
 
   img {
@@ -129,7 +128,7 @@ a {
     justify-content: center;
     color: $color-header-border;
     font-family: $font-heading;
-    font-size: 0.72rem;
+    font-size: 0.8rem;
     font-weight: 600;
     letter-spacing: 0.25em;
     text-transform: uppercase;
@@ -165,7 +164,7 @@ a {
   gap: 0.5rem;
   color: $color-nav-text;
   font-family: $font-heading;
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -174,12 +173,8 @@ a {
 .footer-links {
   display: flex;
   gap: 1.75rem;
-  a {
-    color: $color-nav-text;
-    text-decoration: none;
-    letter-spacing: 0.12em;
-    &:hover { color: #fff; }
-  }
+  a { color: $color-nav-text; text-decoration: none; letter-spacing: 0.12em;
+      &:hover { color: #fff; } }
 }
 
 /* ============================================================
@@ -192,26 +187,24 @@ a {
   padding: 0.6rem 1.6rem;
   border: 2px solid $color-accent;
   font-family: $font-heading;
-  font-size: 0.65rem;
+  font-size: 0.82rem;
+  font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   text-decoration: none;
   transition: background 0.2s, color 0.2s;
-  &:hover {
-    background: $color-accent;
-    color: $color-bg;
-    text-decoration: none;
-  }
+  &:hover { background: $color-accent; color: $color-bg; text-decoration: none; }
 }
 
 /* ============================================================
-   Section labels (shared)
+   Section labels (home page)
    ============================================================ */
 .section-label {
   font-family: $font-heading;
-  font-size: 0.62rem;
+  font-size: 0.82rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.25em;
   color: $color-accent;
   margin-bottom: 1.5rem;
   display: flex;
@@ -220,15 +213,16 @@ a {
 
   &::before {
     content: '//';
-    color: $color-gold;
-    font-size: 0.7rem;
+    color: $color-blue;        /* muted blue for the marker */
+    font-size: 0.9rem;
   }
 
   &::after {
     content: '';
     flex: 1;
     height: 1px;
-    background: $color-border;
+    background: $color-blue;   /* muted blue divider line */
+    opacity: 0.4;
   }
 }
 
@@ -237,27 +231,24 @@ a {
    ============================================================ */
 .hero {
   padding: 3rem 0 2.5rem;
-  border-bottom: 1px solid $color-border;
+  border-bottom: 2px solid $color-blue;  /* blue rule under hero */
   margin-bottom: 3.5rem;
-  position: relative;
 
   h1 {
     font-family: $font-heading;
-    font-size: 2.2rem;
+    font-size: 2.8rem;
     font-weight: 700;
     letter-spacing: 0.08em;
-    line-height: 1.15;
+    line-height: 1.1;
     margin-bottom: 0.75rem;
     color: $color-text;
     text-transform: uppercase;
-
-    /* subtle teal text-shadow for glow */
-    text-shadow: 0 0 40px rgba(58,175,160,0.25);
+    text-shadow: 0 0 40px rgba(30,138,128,0.2);
   }
 
   .tagline {
-    color: $color-subtle;
-    font-size: 0.92rem;
+    color: $color-blue;        /* muted blue for tagline */
+    font-size: 1.05rem;
     margin-bottom: 2rem;
     max-width: 500px;
     font-style: italic;
@@ -272,7 +263,7 @@ a {
 .highlights-section,
 .skills-section {
   margin-bottom: 3.5rem;
-  p { margin-bottom: 1rem; font-weight: 300; }
+  p { margin-bottom: 1rem; font-weight: 300; font-size: 1rem; }
 }
 
 /* ============================================================
@@ -290,36 +281,39 @@ a {
   border: 1px solid $color-border;
   border-left: 3px solid $color-accent;
   padding: 1.4rem 1.6rem;
-  transition: border-color 0.2s;
+  /* depth via blue-tinted shadow */
+  box-shadow: 2px 3px 0 rgba(46,80,112,0.15);
+  transition: border-left-color 0.2s, box-shadow 0.2s;
 
   &:hover {
-    border-left-color: $color-gold;
+    border-left-color: $color-blue;
+    box-shadow: 3px 4px 0 rgba(46,80,112,0.25);
   }
 
   h3, h2 {
     font-family: $font-heading;
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 0.08em;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.07em;
     text-transform: uppercase;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.25rem;
     color: $color-text;
   }
 
   .card-meta,
   .project-meta {
-    font-size: 0.78rem;
+    font-size: 0.88rem;
     color: $color-gold;
     margin-bottom: 0.85rem;
     letter-spacing: 0.05em;
     font-family: $font-heading;
-    font-weight: 400;
+    font-weight: 600;
   }
 
-  p { font-size: 0.92rem; margin-bottom: 0.6rem; color: $color-text; font-weight: 300; }
+  p { font-size: 1rem; margin-bottom: 0.6rem; color: $color-text; font-weight: 300; }
 
   ul {
-    font-size: 0.88rem;
+    font-size: 0.95rem;
     padding-left: 1.1rem;
     color: $color-subtle;
     font-weight: 300;
@@ -343,17 +337,19 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem;
+  align-items: flex-start;
 }
 
 .project-tag {
   font-family: $font-heading;
-  font-size: 0.55rem;
-  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  background: rgba(58,175,160,0.12);
-  color: $color-accent;
-  border: 1px solid $color-accent;
-  padding: 0.2rem 0.6rem;
+  background: $color-blue-faint;
+  color: $color-blue;          /* blue tags */
+  border: 1px solid $color-blue;
+  padding: 0.2rem 0.65rem;
   white-space: nowrap;
   flex-shrink: 0;
 }
@@ -373,22 +369,23 @@ a {
   border: 1px solid $color-border;
   color: $color-subtle;
   font-family: $font-heading;
-  font-size: 0.58rem;
-  letter-spacing: 0.14em;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  padding: 0.35rem 0.9rem;
+  padding: 0.35rem 1rem;
   cursor: pointer;
   transition: all 0.15s;
 
   &:hover {
-    border-color: $color-accent;
-    color: $color-accent;
+    border-color: $color-blue;
+    color: $color-blue;
   }
 
   &.active {
-    background: $color-accent;
-    border-color: $color-accent;
-    color: $color-bg;
+    background: $color-blue;
+    border-color: $color-blue;
+    color: #fff;
   }
 }
 
@@ -400,91 +397,94 @@ a {
 
   h4 {
     font-family: $font-heading;
-    font-size: 0.6rem;
+    font-size: 0.8rem;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.18em;
     color: $color-subtle;
     margin-bottom: 0.65rem;
   }
 }
 
-.skill-chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
+.skill-chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
 
 .chip {
   font-family: $font-heading;
-  font-size: 0.6rem;
-  letter-spacing: 0.1em;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  background: $color-bg-raised;
-  color: $color-pale;
-  padding: 0.3rem 0.8rem;
-  border: 1px solid $color-border;
+  background: $color-blue-faint;  /* blue-tinted chips */
+  color: $color-blue;
+  padding: 0.3rem 0.85rem;
+  border: 1px solid rgba(46,80,112,0.3);
 }
 
 /* ============================================================
-   Page layout
+   Page layout (blog, contact, projects)
    ============================================================ */
 .page-content {
   .page-title {
     font-family: $font-heading;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 700;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     margin-bottom: 0.4rem;
     color: $color-text;
-    text-shadow: 0 0 30px rgba(58,175,160,0.2);
+    text-shadow: 0 0 30px rgba(30,138,128,0.15);
   }
 
   .page-subtitle {
-    color: $color-subtle;
-    font-size: 0.85rem;
+    color: $color-blue;          /* muted blue subtitle */
+    font-size: 0.95rem;
     font-style: italic;
-    margin-bottom: 2.5rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid $color-border;
+    margin-bottom: 2rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 2px solid $color-blue; /* blue rule */
+    opacity: 0.8;
   }
 }
 
 /* ============================================================
    Blog list
    ============================================================ */
-.post-list {
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-}
+.post-list { display: flex; flex-direction: column; gap: 2.25rem; }
 
 .post-preview {
-  border-bottom: 1px solid $color-border;
-  padding-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(46,80,112,0.25); /* subtle blue rule */
+  padding-bottom: 2.25rem;
 
   h2 {
     font-family: $font-heading;
-    font-size: 0.88rem;
-    font-weight: 600;
-    letter-spacing: 0.1em;
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.35rem;
     a { color: $color-text; &:hover { color: $color-accent; } }
   }
 
   time {
     font-family: $font-heading;
-    font-size: 0.6rem;
+    font-size: 0.75rem;
+    font-weight: 600;
     color: $color-gold;
     display: block;
-    margin-bottom: 0.65rem;
+    margin-bottom: 0.6rem;
     text-transform: uppercase;
     letter-spacing: 0.15em;
   }
 
-  p { font-size: 0.92rem; color: $color-subtle; margin-bottom: 0.5rem; font-weight: 300; }
-  .read-more { font-size: 0.7rem; font-family: $font-heading; letter-spacing: 0.1em; color: $color-accent; }
+  p { font-size: 0.98rem; color: $color-subtle; margin-bottom: 0.5rem; font-weight: 300; }
+
+  .read-more {
+    font-size: 0.8rem;
+    font-family: $font-heading;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: $color-accent;
+  }
 }
 
 /* ============================================================
@@ -494,69 +494,64 @@ a {
   .post-header {
     margin-bottom: 2rem;
     padding-bottom: 1.25rem;
-    border-bottom: 1px solid $color-border;
+    border-bottom: 2px solid $color-blue;
   }
 
   .post-title {
     font-family: $font-heading;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    margin-bottom: 0.6rem;
+    margin-bottom: 0.5rem;
   }
 
   .post-date {
     font-family: $font-heading;
-    font-size: 0.62rem;
+    font-size: 0.75rem;
+    font-weight: 600;
     color: $color-gold;
     text-transform: uppercase;
     letter-spacing: 0.18em;
   }
 
   .post-body {
-    h2 { font-family: $font-heading; font-size: 0.9rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; margin: 2rem 0 0.75rem; color: $color-accent; }
-    h3 { font-family: $font-heading; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; margin: 1.5rem 0 0.5rem; color: $color-pale; }
-    p  { margin-bottom: 1rem; font-weight: 300; }
-    ul, ol { padding-left: 1.5rem; margin-bottom: 1rem; li { margin-bottom: 0.25rem; &::marker { color: $color-accent; } } }
-    code { background: $color-bg-raised; border: 1px solid $color-border; padding: 0.1em 0.4em; font-size: 0.88em; color: $color-accent; }
+    h2 { font-family: $font-heading; font-size: 1.15rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin: 2rem 0 0.75rem; color: $color-accent; }
+    h3 { font-family: $font-heading; font-size: 1rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin: 1.5rem 0 0.5rem; color: $color-blue; }
+    p  { margin-bottom: 1rem; font-weight: 300; font-size: 1rem; }
+    ul, ol { padding-left: 1.5rem; margin-bottom: 1rem; font-size: 0.98rem;
+             li { margin-bottom: 0.25rem; &::marker { color: $color-accent; } } }
+    code { background: $color-bg-raised; border: 1px solid $color-border; padding: 0.1em 0.4em; font-size: 0.9em; color: $color-accent; }
     pre  { background: $color-bg-raised; border: 1px solid $color-border; padding: 1rem; overflow-x: auto; margin-bottom: 1rem;
            code { background: none; border: none; padding: 0; } }
-    blockquote { border-left: 3px solid $color-accent; padding-left: 1.1rem; color: $color-subtle; margin-bottom: 1rem; font-style: italic; }
+    blockquote { border-left: 3px solid $color-blue; padding-left: 1.1rem; color: $color-subtle; margin-bottom: 1rem; font-style: italic; }
   }
 
-  .back-link { margin-top: 3rem; font-family: $font-heading; font-size: 0.62rem; letter-spacing: 0.15em; color: $color-accent; }
+  .back-link { margin-top: 3rem; font-family: $font-heading; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.15em; color: $color-blue; }
 }
 
 /* ============================================================
    Contact
    ============================================================ */
-.contact-content {
-  p { margin-bottom: 1.5rem; font-weight: 300; }
-}
+.contact-content { p { margin-bottom: 1.5rem; font-weight: 300; font-size: 1rem; } }
 
-.contact-links {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  margin-bottom: 2rem;
-}
+.contact-links { display: flex; flex-direction: column; gap: 0; margin-bottom: 2rem; }
 
 .contact-item {
   display: flex;
   gap: 1.5rem;
   align-items: baseline;
-  font-size: 0.92rem;
-  border-bottom: 1px solid $color-border;
+  font-size: 1rem;
+  border-bottom: 1px solid rgba(46,80,112,0.25);
   padding: 0.9rem 0;
 
   strong {
     min-width: 110px;
-    color: $color-gold;
-    font-size: 0.6rem;
+    color: $color-blue;         /* blue labels in contact */
+    font-size: 0.78rem;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.18em;
-    font-weight: 400;
+    letter-spacing: 0.15em;
     font-family: $font-heading;
   }
 }
@@ -565,9 +560,10 @@ a {
    Responsive
    ============================================================ */
 @media (max-width: 600px) {
-  .hero h1 { font-size: 1.5rem; }
+  .hero h1 { font-size: 1.8rem; }
   .site-nav { gap: 1.25rem; }
-  .site-title { font-size: 0.65rem; }
+  .site-title { font-size: 0.85rem; }
   .site-banner .banner-placeholder { height: 140px; }
   .filter-bar { gap: 0.4rem; }
+  .card h3, .project-card h2 { font-size: 0.95rem; }
 }
