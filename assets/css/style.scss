@@ -337,6 +337,46 @@ a {
 }
 
 /* ============================================================
+   Filter bar
+   ============================================================ */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.filter-btn {
+  background: none;
+  border: 1.5px solid $color-border;
+  color: $color-subtle;
+  font-family: $font-body;
+  font-size: 0.75rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.9rem;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+
+  &:hover {
+    border-color: $color-accent;
+    color: $color-accent;
+  }
+
+  &.active {
+    background: $color-accent;
+    border-color: $color-accent;
+    color: #fff;
+  }
+}
+
+.tag-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+/* ============================================================
    Page layout
    ============================================================ */
 .page-content {
