@@ -2,20 +2,23 @@
 ---
 
 /* ============================================================
-   Variables — Retro Green Palette
+   Variables — Atomic Age / Retro-Futurism Palette
    ============================================================ */
-$font-heading:   'Belleza', Georgia, serif;
-$font-body:      'Manjari', 'Georgia', serif;
+$font-heading:   'Orbitron', 'Courier New', monospace;
+$font-body:      'Exo 2', 'Helvetica Neue', sans-serif;
 
-$color-bg:       #f5f2eb;
-$color-text:     #2a2d28;
-$color-subtle:   #6b7a62;
-$color-border:   #b8c8b0;
-$color-accent:   #4a6741;
-$color-accent-h: #3a5232;
-$color-mint:     #c8dcc4;
-$color-sage:     #7a9e72;
-$color-card-bg:  #eef0e8;
+/* Colours drawn from 1950s–60s space travel poster palette */
+$color-bg:        #0b1d2a;   /* deep space navy              */
+$color-bg-card:   #112233;   /* card background              */
+$color-bg-raised: #162d40;   /* slightly raised surfaces     */
+$color-text:      #ddd5be;   /* warm parchment / cream       */
+$color-subtle:    #7a9aaa;   /* dusty blue-grey              */
+$color-border:    #1e3a4e;   /* dark teal border             */
+$color-accent:    #3aafa0;   /* teal / aqua — main accent    */
+$color-accent-h:  #2a9090;   /* teal hover                   */
+$color-gold:      #c8a830;   /* atomic-age gold              */
+$color-warm:      #c87a40;   /* dusty orange highlight       */
+$color-pale:      #a8c8d0;   /* pale blue (planet tones)     */
 
 $max-width: 820px;
 
@@ -28,26 +31,30 @@ html { font-size: 16px; -webkit-font-smoothing: antialiased; }
 
 body {
   font-family: $font-body;
+  font-weight: 300;
   color: $color-text;
   background: $color-bg;
   line-height: 1.75;
+  /* subtle star-field dot pattern */
+  background-image:
+    radial-gradient(ellipse at 20% 50%, rgba(58,175,160,0.04) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(200,168,48,0.04) 0%, transparent 50%);
 }
 
 img { max-width: 100%; height: auto; display: block; }
 
 a {
   color: $color-accent;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  &:hover { color: $color-accent-h; }
+  text-decoration: none;
+  &:hover { color: $color-gold; text-decoration: none; }
 }
 
 /* ============================================================
    Header / Nav
    ============================================================ */
 .site-header {
-  background: $color-text;
-  border-bottom: 3px solid $color-accent;
+  background: rgba(5, 12, 20, 0.95);
+  border-bottom: 2px solid $color-accent;
   padding: 1.1rem 0;
 }
 
@@ -64,26 +71,26 @@ a {
 
 .site-title {
   font-family: $font-heading;
-  font-size: 1.15rem;
-  color: $color-mint;
+  font-size: 0.75rem;
+  color: $color-accent;
   text-decoration: none;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
-  &:hover { color: #fff; text-decoration: none; }
+  &:hover { color: $color-gold; }
 }
 
 .site-nav {
   display: flex;
   gap: 2rem;
   a {
-    font-family: $font-body;
-    font-size: 0.82rem;
-    color: #b8c8b0;
+    font-family: $font-heading;
+    font-size: 0.6rem;
+    color: $color-subtle;
     text-decoration: none;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.18em;
     transition: color 0.15s;
-    &:hover, &.active { color: #fff; }
+    &:hover, &.active { color: $color-accent; }
   }
 }
 
@@ -92,31 +99,34 @@ a {
    ============================================================ */
 .site-banner {
   width: 100%;
-  max-height: 320px;
+  max-height: 340px;
   overflow: hidden;
-  border-bottom: 3px solid $color-accent;
+  border-bottom: 2px solid $color-accent;
+  position: relative;
 
   img {
     width: 100%;
-    height: 320px;
+    height: 340px;
     object-fit: cover;
     object-position: center;
     display: block;
+    filter: saturate(0.85) brightness(0.85);
   }
 
   .banner-placeholder {
     width: 100%;
-    height: 220px;
-    background: linear-gradient(135deg, $color-text 0%, $color-accent 60%, $color-sage 100%);
+    height: 240px;
+    background:
+      linear-gradient(180deg, #05111e 0%, #0b2a3a 40%, #0d3a2a 100%);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: $color-mint;
+    color: $color-accent;
     font-family: $font-heading;
-    font-size: 0.85rem;
-    letter-spacing: 0.15em;
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
     text-transform: uppercase;
-    opacity: 0.7;
+    border-bottom: 1px solid $color-border;
   }
 }
 
@@ -133,11 +143,9 @@ a {
    Footer
    ============================================================ */
 .site-footer {
-  background: $color-text;
-  border-top: 3px solid $color-accent;
+  background: #050c14;
+  border-top: 2px solid $color-accent;
   padding: 1.5rem 0;
-  font-size: 0.8rem;
-  color: $color-subtle;
 }
 
 .footer-inner {
@@ -149,14 +157,22 @@ a {
   align-items: center;
   flex-wrap: wrap;
   gap: 0.5rem;
-  color: #b8c8b0;
+  color: $color-subtle;
+  font-family: $font-heading;
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 .footer-links {
   display: flex;
-  gap: 1.5rem;
-  a { color: #b8c8b0; text-decoration: none; text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.75rem;
-      &:hover { color: #fff; } }
+  gap: 1.75rem;
+  a {
+    color: $color-subtle;
+    text-decoration: none;
+    letter-spacing: 0.12em;
+    &:hover { color: $color-accent; }
+  }
 }
 
 /* ============================================================
@@ -164,33 +180,42 @@ a {
    ============================================================ */
 .btn {
   display: inline-block;
-  background: $color-accent;
-  color: #fff;
-  padding: 0.6rem 1.4rem;
+  background: transparent;
+  color: $color-accent;
+  padding: 0.6rem 1.6rem;
   border: 2px solid $color-accent;
-  font-family: $font-body;
-  font-size: 0.82rem;
-  font-weight: 400;
-  letter-spacing: 0.1em;
+  font-family: $font-heading;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   text-decoration: none;
-  transition: background 0.15s, color 0.15s;
-  &:hover { background: $color-bg; color: $color-accent; text-decoration: none; }
+  transition: background 0.2s, color 0.2s;
+  &:hover {
+    background: $color-accent;
+    color: $color-bg;
+    text-decoration: none;
+  }
 }
 
 /* ============================================================
-   Section headings (shared)
+   Section labels (shared)
    ============================================================ */
 .section-label {
   font-family: $font-heading;
-  font-size: 0.78rem;
+  font-size: 0.62rem;
   text-transform: uppercase;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.3em;
   color: $color-accent;
   margin-bottom: 1.5rem;
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 1rem;
+
+  &::before {
+    content: '//';
+    color: $color-gold;
+    font-size: 0.7rem;
+  }
 
   &::after {
     content: '';
@@ -204,26 +229,32 @@ a {
    Home — Hero
    ============================================================ */
 .hero {
-  padding: 2.5rem 0 2.5rem;
-  border-bottom: 2px solid $color-border;
-  margin-bottom: 3rem;
+  padding: 3rem 0 2.5rem;
+  border-bottom: 1px solid $color-border;
+  margin-bottom: 3.5rem;
+  position: relative;
 
   h1 {
     font-family: $font-heading;
-    font-size: 2.6rem;
-    font-weight: 400;
-    letter-spacing: 0.04em;
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
     line-height: 1.15;
-    margin-bottom: 0.6rem;
+    margin-bottom: 0.75rem;
     color: $color-text;
+    text-transform: uppercase;
+
+    /* subtle teal text-shadow for glow */
+    text-shadow: 0 0 40px rgba(58,175,160,0.25);
   }
 
   .tagline {
     color: $color-subtle;
-    font-size: 1rem;
-    margin-bottom: 1.75rem;
-    max-width: 480px;
+    font-size: 0.92rem;
+    margin-bottom: 2rem;
+    max-width: 500px;
     font-style: italic;
+    letter-spacing: 0.02em;
   }
 }
 
@@ -234,53 +265,61 @@ a {
 .highlights-section,
 .skills-section {
   margin-bottom: 3.5rem;
-  p { margin-bottom: 1rem; }
+  p { margin-bottom: 1rem; font-weight: 300; }
 }
 
 /* ============================================================
-   Cards (highlights + projects + experience)
+   Cards (highlights + projects)
    ============================================================ */
 .highlight-cards,
-.projects-grid,
-.experience-list {
+.projects-grid {
   display: grid;
-  gap: 1.5rem;
+  gap: 1.25rem;
 }
 
 .card,
-.project-card,
-.experience-card {
-  background: $color-card-bg;
-  border: 2px solid $color-border;
-  border-left: 4px solid $color-accent;
+.project-card {
+  background: $color-bg-card;
+  border: 1px solid $color-border;
+  border-left: 3px solid $color-accent;
   padding: 1.4rem 1.6rem;
+  transition: border-color 0.2s;
+
+  &:hover {
+    border-left-color: $color-gold;
+  }
 
   h3, h2 {
     font-family: $font-heading;
-    font-size: 1.05rem;
-    font-weight: 400;
-    letter-spacing: 0.02em;
-    margin-bottom: 0.2rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 0.3rem;
     color: $color-text;
   }
 
   .card-meta,
-  .project-meta,
-  .experience-meta {
-    font-size: 0.8rem;
-    color: $color-accent;
+  .project-meta {
+    font-size: 0.78rem;
+    color: $color-gold;
     margin-bottom: 0.85rem;
     letter-spacing: 0.05em;
-    text-transform: uppercase;
+    font-family: $font-heading;
+    font-weight: 400;
   }
 
-  p { font-size: 0.95rem; margin-bottom: 0.6rem; color: $color-text; }
+  p { font-size: 0.92rem; margin-bottom: 0.6rem; color: $color-text; font-weight: 300; }
 
   ul {
-    font-size: 0.9rem;
-    padding-left: 1.25rem;
+    font-size: 0.88rem;
+    padding-left: 1.1rem;
     color: $color-subtle;
-    li { margin-bottom: 0.3rem; }
+    font-weight: 300;
+    li {
+      margin-bottom: 0.3rem;
+      &::marker { color: $color-accent; }
+    }
   }
 }
 
@@ -293,47 +332,23 @@ a {
   flex-wrap: wrap;
 }
 
-.project-tag {
-  font-size: 0.72rem;
-  font-weight: 400;
-  background: $color-mint;
-  color: $color-accent;
-  padding: 0.2rem 0.65rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-
-/* ============================================================
-   Skills
-   ============================================================ */
-.skills-group {
-  margin-bottom: 1.25rem;
-
-  h4 {
-    font-family: $font-heading;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: $color-subtle;
-    margin-bottom: 0.6rem;
-  }
-}
-
-.skill-chips {
+.tag-group {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.4rem;
 }
 
-.chip {
-  font-size: 0.8rem;
-  background: $color-mint;
+.project-tag {
+  font-family: $font-heading;
+  font-size: 0.55rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: rgba(58,175,160,0.12);
   color: $color-accent;
-  padding: 0.25rem 0.75rem;
-  border: 1px solid $color-border;
-  letter-spacing: 0.04em;
+  border: 1px solid $color-accent;
+  padding: 0.2rem 0.6rem;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 /* ============================================================
@@ -347,16 +362,16 @@ a {
 }
 
 .filter-btn {
-  background: none;
-  border: 1.5px solid $color-border;
+  background: transparent;
+  border: 1px solid $color-border;
   color: $color-subtle;
-  font-family: $font-body;
-  font-size: 0.75rem;
-  letter-spacing: 0.09em;
+  font-family: $font-heading;
+  font-size: 0.58rem;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   padding: 0.35rem 0.9rem;
   cursor: pointer;
-  transition: background 0.15s, color 0.15s, border-color 0.15s;
+  transition: all 0.15s;
 
   &:hover {
     border-color: $color-accent;
@@ -366,14 +381,41 @@ a {
   &.active {
     background: $color-accent;
     border-color: $color-accent;
-    color: #fff;
+    color: $color-bg;
   }
 }
 
-.tag-group {
+/* ============================================================
+   Skills
+   ============================================================ */
+.skills-group {
+  margin-bottom: 1.25rem;
+
+  h4 {
+    font-family: $font-heading;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: $color-subtle;
+    margin-bottom: 0.65rem;
+  }
+}
+
+.skill-chips {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem;
+  gap: 0.5rem;
+}
+
+.chip {
+  font-family: $font-heading;
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: $color-bg-raised;
+  color: $color-pale;
+  padding: 0.3rem 0.8rem;
+  border: 1px solid $color-border;
 }
 
 /* ============================================================
@@ -382,20 +424,22 @@ a {
 .page-content {
   .page-title {
     font-family: $font-heading;
-    font-size: 2rem;
-    font-weight: 400;
-    letter-spacing: 0.05em;
-    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 0.4rem;
     color: $color-text;
+    text-shadow: 0 0 30px rgba(58,175,160,0.2);
   }
 
   .page-subtitle {
     color: $color-subtle;
-    font-size: 0.88rem;
+    font-size: 0.85rem;
     font-style: italic;
     margin-bottom: 2.5rem;
     padding-bottom: 1.5rem;
-    border-bottom: 2px solid $color-border;
+    border-bottom: 1px solid $color-border;
   }
 }
 
@@ -414,25 +458,26 @@ a {
 
   h2 {
     font-family: $font-heading;
-    font-size: 1.2rem;
-    font-weight: 400;
-    margin-bottom: 0.3rem;
-    a { color: $color-text; text-decoration: none; &:hover { color: $color-accent; } }
+    font-size: 0.88rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 0.4rem;
+    a { color: $color-text; &:hover { color: $color-accent; } }
   }
 
   time {
-    font-size: 0.78rem;
-    color: $color-accent;
+    font-family: $font-heading;
+    font-size: 0.6rem;
+    color: $color-gold;
     display: block;
-    margin-bottom: 0.6rem;
+    margin-bottom: 0.65rem;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.15em;
   }
 
-  p { font-size: 0.93rem; color: $color-subtle; margin-bottom: 0.5rem; }
-
-  .read-more { font-size: 0.85rem; text-decoration: none; color: $color-accent;
-               &:hover { color: $color-accent-h; } }
+  p { font-size: 0.92rem; color: $color-subtle; margin-bottom: 0.5rem; font-weight: 300; }
+  .read-more { font-size: 0.7rem; font-family: $font-heading; letter-spacing: 0.1em; color: $color-accent; }
 }
 
 /* ============================================================
@@ -442,66 +487,68 @@ a {
   .post-header {
     margin-bottom: 2rem;
     padding-bottom: 1.25rem;
-    border-bottom: 2px solid $color-border;
+    border-bottom: 1px solid $color-border;
   }
 
   .post-title {
     font-family: $font-heading;
-    font-size: 2rem;
-    font-weight: 400;
-    letter-spacing: 0.03em;
-    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 0.6rem;
   }
 
   .post-date {
-    font-size: 0.8rem;
-    color: $color-accent;
+    font-family: $font-heading;
+    font-size: 0.62rem;
+    color: $color-gold;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.18em;
   }
 
   .post-body {
-    h2 { font-family: $font-heading; font-size: 1.3rem; font-weight: 400; margin: 2rem 0 0.75rem; }
-    h3 { font-family: $font-heading; font-size: 1.05rem; font-weight: 400; margin: 1.5rem 0 0.5rem; }
-    p  { margin-bottom: 1rem; }
-    ul, ol { padding-left: 1.5rem; margin-bottom: 1rem; li { margin-bottom: 0.25rem; } }
-    code { background: $color-card-bg; border: 1px solid $color-border; padding: 0.1em 0.35em; font-size: 0.88em; }
-    pre  { background: $color-card-bg; border: 1px solid $color-border; padding: 1rem; overflow-x: auto; margin-bottom: 1rem;
+    h2 { font-family: $font-heading; font-size: 0.9rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; margin: 2rem 0 0.75rem; color: $color-accent; }
+    h3 { font-family: $font-heading; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; margin: 1.5rem 0 0.5rem; color: $color-pale; }
+    p  { margin-bottom: 1rem; font-weight: 300; }
+    ul, ol { padding-left: 1.5rem; margin-bottom: 1rem; li { margin-bottom: 0.25rem; &::marker { color: $color-accent; } } }
+    code { background: $color-bg-raised; border: 1px solid $color-border; padding: 0.1em 0.4em; font-size: 0.88em; color: $color-accent; }
+    pre  { background: $color-bg-raised; border: 1px solid $color-border; padding: 1rem; overflow-x: auto; margin-bottom: 1rem;
            code { background: none; border: none; padding: 0; } }
-    blockquote { border-left: 3px solid $color-accent; padding-left: 1rem; color: $color-subtle; margin-bottom: 1rem; font-style: italic; }
+    blockquote { border-left: 3px solid $color-accent; padding-left: 1.1rem; color: $color-subtle; margin-bottom: 1rem; font-style: italic; }
   }
 
-  .back-link { margin-top: 3rem; font-size: 0.85rem; text-decoration: none; color: $color-accent; }
+  .back-link { margin-top: 3rem; font-family: $font-heading; font-size: 0.62rem; letter-spacing: 0.15em; color: $color-accent; }
 }
 
 /* ============================================================
    Contact
    ============================================================ */
 .contact-content {
-  p { margin-bottom: 1.5rem; }
+  p { margin-bottom: 1.5rem; font-weight: 300; }
 }
 
 .contact-links {
   display: flex;
   flex-direction: column;
-  gap: 1.1rem;
+  gap: 0;
   margin-bottom: 2rem;
 }
 
 .contact-item {
   display: flex;
-  gap: 1.25rem;
+  gap: 1.5rem;
   align-items: baseline;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   border-bottom: 1px solid $color-border;
-  padding-bottom: 1rem;
+  padding: 0.9rem 0;
 
   strong {
-    min-width: 100px;
-    color: $color-accent;
-    font-size: 0.75rem;
+    min-width: 110px;
+    color: $color-gold;
+    font-size: 0.6rem;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.18em;
     font-weight: 400;
     font-family: $font-heading;
   }
@@ -511,7 +558,9 @@ a {
    Responsive
    ============================================================ */
 @media (max-width: 600px) {
-  .hero h1 { font-size: 2rem; }
-  .site-nav { gap: 1.1rem; }
+  .hero h1 { font-size: 1.5rem; }
+  .site-nav { gap: 1.25rem; }
+  .site-title { font-size: 0.65rem; }
   .site-banner .banner-placeholder { height: 140px; }
+  .filter-bar { gap: 0.4rem; }
 }
