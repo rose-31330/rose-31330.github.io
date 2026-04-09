@@ -2,17 +2,22 @@
 ---
 
 /* ============================================================
-   Variables
+   Variables — Retro Green Palette
    ============================================================ */
-$font-family:    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-$color-bg:       #ffffff;
-$color-text:     #1a1a1a;
-$color-subtle:   #6b7280;
-$color-border:   #e5e7eb;
-$color-accent:   #2563eb;
-$color-accent-h: #1d4ed8;
+$font-heading:   'Belleza', Georgia, serif;
+$font-body:      'Manjari', 'Georgia', serif;
 
-$max-width: 780px;
+$color-bg:       #f5f2eb;
+$color-text:     #2a2d28;
+$color-subtle:   #6b7a62;
+$color-border:   #b8c8b0;
+$color-accent:   #4a6741;
+$color-accent-h: #3a5232;
+$color-mint:     #c8dcc4;
+$color-sage:     #7a9e72;
+$color-card-bg:  #eef0e8;
+
+$max-width: 820px;
 
 /* ============================================================
    Reset & Base
@@ -22,26 +27,28 @@ $max-width: 780px;
 html { font-size: 16px; -webkit-font-smoothing: antialiased; }
 
 body {
-  font-family: $font-family;
+  font-family: $font-body;
   color: $color-text;
   background: $color-bg;
-  line-height: 1.7;
+  line-height: 1.75;
 }
 
 img { max-width: 100%; height: auto; display: block; }
 
 a {
   color: $color-accent;
-  text-decoration: none;
-  &:hover { text-decoration: underline; }
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  &:hover { color: $color-accent-h; }
 }
 
 /* ============================================================
    Header / Nav
    ============================================================ */
 .site-header {
-  border-bottom: 1px solid $color-border;
-  padding: 1rem 0;
+  background: $color-text;
+  border-bottom: 3px solid $color-accent;
+  padding: 1.1rem 0;
 }
 
 .header-inner {
@@ -56,23 +63,60 @@ a {
 }
 
 .site-title {
-  font-weight: 600;
-  font-size: 1rem;
-  color: $color-text;
+  font-family: $font-heading;
+  font-size: 1.15rem;
+  color: $color-mint;
   text-decoration: none;
-  letter-spacing: -0.01em;
-  &:hover { text-decoration: none; color: $color-accent; }
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  &:hover { color: #fff; text-decoration: none; }
 }
 
 .site-nav {
   display: flex;
-  gap: 1.75rem;
+  gap: 2rem;
   a {
-    font-size: 0.9rem;
-    color: $color-subtle;
+    font-family: $font-body;
+    font-size: 0.82rem;
+    color: #b8c8b0;
     text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
     transition: color 0.15s;
-    &:hover, &.active { color: $color-text; }
+    &:hover, &.active { color: #fff; }
+  }
+}
+
+/* ============================================================
+   Banner
+   ============================================================ */
+.site-banner {
+  width: 100%;
+  max-height: 320px;
+  overflow: hidden;
+  border-bottom: 3px solid $color-accent;
+
+  img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+
+  .banner-placeholder {
+    width: 100%;
+    height: 220px;
+    background: linear-gradient(135deg, $color-text 0%, $color-accent 60%, $color-sage 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-mint;
+    font-family: $font-heading;
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    opacity: 0.7;
   }
 }
 
@@ -89,9 +133,10 @@ a {
    Footer
    ============================================================ */
 .site-footer {
-  border-top: 1px solid $color-border;
+  background: $color-text;
+  border-top: 3px solid $color-accent;
   padding: 1.5rem 0;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: $color-subtle;
 }
 
@@ -104,12 +149,14 @@ a {
   align-items: center;
   flex-wrap: wrap;
   gap: 0.5rem;
+  color: #b8c8b0;
 }
 
 .footer-links {
   display: flex;
-  gap: 1.25rem;
-  a { color: $color-subtle; &:hover { color: $color-text; } }
+  gap: 1.5rem;
+  a { color: #b8c8b0; text-decoration: none; text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.75rem;
+      &:hover { color: #fff; } }
 }
 
 /* ============================================================
@@ -119,53 +166,65 @@ a {
   display: inline-block;
   background: $color-accent;
   color: #fff;
-  padding: 0.55rem 1.25rem;
-  border-radius: 6px;
-  font-size: 0.9rem;
-  font-weight: 500;
+  padding: 0.6rem 1.4rem;
+  border: 2px solid $color-accent;
+  font-family: $font-body;
+  font-size: 0.82rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   text-decoration: none;
-  transition: background 0.15s;
-  &:hover { background: $color-accent-h; text-decoration: none; color: #fff; }
+  transition: background 0.15s, color 0.15s;
+  &:hover { background: $color-bg; color: $color-accent; text-decoration: none; }
+}
+
+/* ============================================================
+   Section headings (shared)
+   ============================================================ */
+.section-label {
+  font-family: $font-heading;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: $color-accent;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  &::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: $color-border;
+  }
 }
 
 /* ============================================================
    Home — Hero
    ============================================================ */
 .hero {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2.5rem;
-  padding-bottom: 3rem;
-  border-bottom: 1px solid $color-border;
+  padding: 2.5rem 0 2.5rem;
+  border-bottom: 2px solid $color-border;
   margin-bottom: 3rem;
 
   h1 {
-    font-size: 2rem;
-    font-weight: 600;
-    letter-spacing: -0.03em;
-    line-height: 1.2;
-    margin-bottom: 0.5rem;
+    font-family: $font-heading;
+    font-size: 2.6rem;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    line-height: 1.15;
+    margin-bottom: 0.6rem;
+    color: $color-text;
   }
 
   .tagline {
     color: $color-subtle;
     font-size: 1rem;
-    margin-bottom: 1.5rem;
-    max-width: 420px;
+    margin-bottom: 1.75rem;
+    max-width: 480px;
+    font-style: italic;
   }
-}
-
-.hero-photo {
-  flex-shrink: 0;
-}
-
-.profile-photo {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid $color-border;
 }
 
 /* ============================================================
@@ -174,55 +233,54 @@ a {
 .about-section,
 .highlights-section,
 .skills-section {
-  margin-bottom: 3rem;
-
-  h2 {
-    font-size: 1.1rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: $color-subtle;
-    margin-bottom: 1.25rem;
-  }
-
+  margin-bottom: 3.5rem;
   p { margin-bottom: 1rem; }
 }
 
 /* ============================================================
-   Cards (highlights + projects)
+   Cards (highlights + projects + experience)
    ============================================================ */
 .highlight-cards,
-.projects-grid {
+.projects-grid,
+.experience-list {
   display: grid;
-  gap: 1.25rem;
+  gap: 1.5rem;
 }
 
 .card,
-.project-card {
-  border: 1px solid $color-border;
-  border-radius: 8px;
-  padding: 1.25rem 1.5rem;
+.project-card,
+.experience-card {
+  background: $color-card-bg;
+  border: 2px solid $color-border;
+  border-left: 4px solid $color-accent;
+  padding: 1.4rem 1.6rem;
 
   h3, h2 {
-    font-size: 1rem;
-    font-weight: 600;
-    margin-bottom: 0.25rem;
+    font-family: $font-heading;
+    font-size: 1.05rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    margin-bottom: 0.2rem;
+    color: $color-text;
   }
 
   .card-meta,
-  .project-meta {
-    font-size: 0.82rem;
-    color: $color-subtle;
-    margin-bottom: 0.75rem;
+  .project-meta,
+  .experience-meta {
+    font-size: 0.8rem;
+    color: $color-accent;
+    margin-bottom: 0.85rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
   }
 
-  p { font-size: 0.95rem; margin-bottom: 0.5rem; }
+  p { font-size: 0.95rem; margin-bottom: 0.6rem; color: $color-text; }
 
   ul {
     font-size: 0.9rem;
     padding-left: 1.25rem;
     color: $color-subtle;
-    li { margin-bottom: 0.25rem; }
+    li { margin-bottom: 0.3rem; }
   }
 }
 
@@ -231,17 +289,18 @@ a {
   align-items: flex-start;
   justify-content: space-between;
   gap: 0.75rem;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.2rem;
   flex-wrap: wrap;
 }
 
 .project-tag {
-  font-size: 0.75rem;
-  font-weight: 500;
-  background: #eff6ff;
+  font-size: 0.72rem;
+  font-weight: 400;
+  background: $color-mint;
   color: $color-accent;
-  padding: 0.2rem 0.6rem;
-  border-radius: 99px;
+  padding: 0.2rem 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   white-space: nowrap;
   flex-shrink: 0;
 }
@@ -250,14 +309,15 @@ a {
    Skills
    ============================================================ */
 .skills-group {
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
 
   h4 {
-    font-size: 0.8rem;
+    font-family: $font-heading;
+    font-size: 0.75rem;
     text-transform: uppercase;
-    letter-spacing: 0.07em;
+    letter-spacing: 0.12em;
     color: $color-subtle;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.6rem;
   }
 }
 
@@ -268,24 +328,34 @@ a {
 }
 
 .chip {
-  font-size: 0.83rem;
-  background: #f3f4f6;
-  color: $color-text;
-  padding: 0.25rem 0.7rem;
-  border-radius: 99px;
+  font-size: 0.8rem;
+  background: $color-mint;
+  color: $color-accent;
+  padding: 0.25rem 0.75rem;
+  border: 1px solid $color-border;
+  letter-spacing: 0.04em;
 }
 
 /* ============================================================
-   Page layout (About, Blog, Contact, etc.)
+   Page layout
    ============================================================ */
 .page-content {
   .page-title {
-    font-size: 1.75rem;
-    font-weight: 600;
-    letter-spacing: -0.02em;
-    margin-bottom: 2rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid $color-border;
+    font-family: $font-heading;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+    color: $color-text;
+  }
+
+  .page-subtitle {
+    color: $color-subtle;
+    font-size: 0.88rem;
+    font-style: italic;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid $color-border;
   }
 }
 
@@ -299,23 +369,30 @@ a {
 }
 
 .post-preview {
+  border-bottom: 1px solid $color-border;
+  padding-bottom: 2.5rem;
+
   h2 {
-    font-size: 1.15rem;
-    font-weight: 600;
-    margin-bottom: 0.25rem;
-    a { color: $color-text; &:hover { color: $color-accent; text-decoration: none; } }
+    font-family: $font-heading;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 0.3rem;
+    a { color: $color-text; text-decoration: none; &:hover { color: $color-accent; } }
   }
 
   time {
-    font-size: 0.82rem;
-    color: $color-subtle;
+    font-size: 0.78rem;
+    color: $color-accent;
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
   }
 
-  p { font-size: 0.95rem; color: $color-subtle; margin-bottom: 0.5rem; }
+  p { font-size: 0.93rem; color: $color-subtle; margin-bottom: 0.5rem; }
 
-  .read-more { font-size: 0.88rem; }
+  .read-more { font-size: 0.85rem; text-decoration: none; color: $color-accent;
+               &:hover { color: $color-accent-h; } }
 }
 
 /* ============================================================
@@ -324,34 +401,37 @@ a {
 .post-content {
   .post-header {
     margin-bottom: 2rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid $color-border;
+    padding-bottom: 1.25rem;
+    border-bottom: 2px solid $color-border;
   }
 
   .post-title {
-    font-size: 1.75rem;
-    font-weight: 600;
-    letter-spacing: -0.02em;
+    font-family: $font-heading;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 0.03em;
     margin-bottom: 0.5rem;
   }
 
   .post-date {
-    font-size: 0.85rem;
-    color: $color-subtle;
+    font-size: 0.8rem;
+    color: $color-accent;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
   }
 
   .post-body {
-    h2 { font-size: 1.2rem; font-weight: 600; margin: 2rem 0 0.75rem; }
-    h3 { font-size: 1rem; font-weight: 600; margin: 1.5rem 0 0.5rem; }
+    h2 { font-family: $font-heading; font-size: 1.3rem; font-weight: 400; margin: 2rem 0 0.75rem; }
+    h3 { font-family: $font-heading; font-size: 1.05rem; font-weight: 400; margin: 1.5rem 0 0.5rem; }
     p  { margin-bottom: 1rem; }
     ul, ol { padding-left: 1.5rem; margin-bottom: 1rem; li { margin-bottom: 0.25rem; } }
-    code { background: #f3f4f6; padding: 0.1em 0.35em; border-radius: 3px; font-size: 0.88em; }
-    pre  { background: #f3f4f6; padding: 1rem; border-radius: 6px; overflow-x: auto; margin-bottom: 1rem;
-           code { background: none; padding: 0; } }
-    blockquote { border-left: 3px solid $color-border; padding-left: 1rem; color: $color-subtle; margin-bottom: 1rem; }
+    code { background: $color-card-bg; border: 1px solid $color-border; padding: 0.1em 0.35em; font-size: 0.88em; }
+    pre  { background: $color-card-bg; border: 1px solid $color-border; padding: 1rem; overflow-x: auto; margin-bottom: 1rem;
+           code { background: none; border: none; padding: 0; } }
+    blockquote { border-left: 3px solid $color-accent; padding-left: 1rem; color: $color-subtle; margin-bottom: 1rem; font-style: italic; }
   }
 
-  .back-link { margin-top: 3rem; font-size: 0.9rem; }
+  .back-link { margin-top: 3rem; font-size: 0.85rem; text-decoration: none; color: $color-accent; }
 }
 
 /* ============================================================
@@ -364,22 +444,26 @@ a {
 .contact-links {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
+  gap: 1.1rem;
+  margin-bottom: 2rem;
 }
 
 .contact-item {
   display: flex;
-  gap: 1rem;
+  gap: 1.25rem;
   align-items: baseline;
   font-size: 0.95rem;
+  border-bottom: 1px solid $color-border;
+  padding-bottom: 1rem;
 
   strong {
-    min-width: 90px;
-    color: $color-subtle;
-    font-size: 0.82rem;
+    min-width: 100px;
+    color: $color-accent;
+    font-size: 0.75rem;
     text-transform: uppercase;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    font-family: $font-heading;
   }
 }
 
@@ -387,14 +471,7 @@ a {
    Responsive
    ============================================================ */
 @media (max-width: 600px) {
-  .hero {
-    flex-direction: column-reverse;
-    align-items: flex-start;
-    gap: 1.5rem;
-    h1 { font-size: 1.6rem; }
-  }
-
-  .profile-photo { width: 100px; height: 100px; }
-
+  .hero h1 { font-size: 2rem; }
   .site-nav { gap: 1.1rem; }
+  .site-banner .banner-placeholder { height: 140px; }
 }
