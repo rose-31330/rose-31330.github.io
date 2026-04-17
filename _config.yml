@@ -18,7 +18,10 @@ plugins:
 # Navigation pages
 header_pages:
   - index.md
+  - experience.md
   - projects.md
+  - skills.md
+  - education.md
   - blog.md
   - contact.md
 

@@ -2,98 +2,67 @@
 layout: default
 title: About
 permalink: /
-banner: /assets/images/banner.jpg
 ---
 
 <div class="home">
 
-  <div class="hero">
-    <h1>Rose Carcaillet</h1>
-    <p class="tagline">BEng Aerospace Engineering student passionate about spacecraft systems engineering</p>
-    <a href="/assets/cv/rose-carcaillet-cv.pdf" class="btn" download>Download CV</a>
+  <div class="home-hero">
+    <div class="hero-left">
+      <h1>Rose Carcaillet</h1>
+      <p class="tagline">Aerospace Engineering &amp; Spacecraft Systems · QMUL</p>
+    </div>
+    <div class="hero-right">
+      <span class="lang-en">London, UK</span>
+      <span class="lang-fr" style="display:none">Londres, Royaume-Uni</span>
+    </div>
   </div>
 
-  <section class="about-section">
-    <p class="section-label">About Me</p>
-    <p>
-      I'm a third-year integrated MEng Aerospace Engineering student at Queen Mary University of London,
-      currently averaging 78% and on track for a First. I'm French-British and fully fluent in both English
-      and French, with conversational Spanish.
-    </p>
-    <p>
-      My interests lie at the intersection of spacecraft systems, mission analysis, and remote sensing.
-      I have hands-on experience in technical research, systems engineering, and data analysis, gained
-      through an industry internship and several engineering projects.
-    </p>
-  </section>
+  <div class="two-col">
 
-  <section class="highlights-section">
-    <p class="section-label">Highlights</p>
-    <div class="highlight-cards">
-
-      <div class="card">
-        <h3>Engineering Intern — Satellite Applications Catapult</h3>
-        <p class="card-meta">SPIN Programme · June–August 2025</p>
-        <p>
-          Conducted technical research into GNSS-Reflectometry and GNSS-based SAR, authored a 60-page
-          technical report, and analysed mission data (CYGNSS, PRETTY, HydroGNSS) using Python.
-          Identified novel commercial applications and key UK stakeholders.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Competition Team Lead — UKSEDS National Rocketry Championship</h3>
-        <p class="card-meta">July 2025 – Present</p>
-        <p>
-          Leading a team of 12 to design, build, and launch a mid-power rocket. Applying systems
-          engineering methods across propulsion, avionics, structures, and recovery subsystems.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>CubeSat Project — QMSAT S.C.R.A.P.</h3>
-        <p class="card-meta">June 2025 – Present</p>
-        <p>
-          Contributing to the mission concept definition of a 3U CubeSat to track and classify space
-          debris using machine learning. Selected for the ESA Concurrent Engineering Workshop at TU Berlin.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>President — Mile End Music Society</h3>
-        <p class="card-meta">May 2024 – Present</p>
-        <p>
-          Leading one of QMUL's largest societies (250 members, 6 ensembles). Organised an
-          inter-university Battle of the Bands awarded Event of the Year at QM Student Group Awards 2025.
-        </p>
-      </div>
-
+    <div class="panel panel-open">
+      <p class="panel-title">
+        <span class="lang-en">Profile</span>
+        <span class="lang-fr" style="display:none">Profil</span>
+      </p>
+      <p class="lang-en">
+        Third-year integrated MEng Aerospace Engineering student at Queen Mary University of London,
+        averaging 78% and on track for a First. French-British, fully fluent in English and French,
+        with conversational Spanish.
+      </p>
+      <p class="lang-fr" style="display:none">
+        Étudiante en troisième année de MEng Génie Aérospatial à Queen Mary University of London,
+        avec une moyenne de 78 % et en bonne voie pour obtenir un First. Franco-britannique, parfaitement
+        bilingue anglais-français, avec un niveau conversationnel en espagnol.
+      </p>
+      <p class="lang-en">
+        Interests at the intersection of spacecraft systems, mission analysis, and remote sensing —
+        with hands-on experience in technical research, systems engineering, and data analysis.
+      </p>
+      <p class="lang-fr" style="display:none">
+        Centres d'intérêt à l'intersection des systèmes spatiaux, de l'analyse de mission et de la
+        télédétection, avec une expérience pratique en recherche technique, ingénierie systèmes et analyse de données.
+      </p>
     </div>
-  </section>
 
-  <section class="skills-section">
-    <p class="section-label">Skills &amp; Tools</p>
-    <div class="skills-group">
-      <h4>Technical</h4>
-      <div class="skill-chips">
-        <span class="chip">MATLAB</span>
-        <span class="chip">Python</span>
-        <span class="chip">SOLIDWORKS</span>
-        <span class="chip">Creo by PTC</span>
-        <span class="chip">OpenRocket</span>
-        <span class="chip">Systems Engineering</span>
-        <span class="chip">Data Analysis</span>
-        <span class="chip">Simulation</span>
-      </div>
+    <div class="panel">
+      <p class="panel-title">
+        <span class="lang-en">Focus Areas</span>
+        <span class="lang-fr" style="display:none">Domaines de spécialisation</span>
+      </p>
+      <ul>
+        <li class="lang-en">Spacecraft systems engineering &amp; mission analysis</li>
+        <li class="lang-fr" style="display:none">Ingénierie des systèmes spatiaux et analyse de mission</li>
+        <li class="lang-en">GNSS-Reflectometry and remote sensing</li>
+        <li class="lang-fr" style="display:none">GNSS-Réflectométrie et télédétection</li>
+        <li class="lang-en">Rocketry: propulsion, avionics, structures &amp; recovery</li>
+        <li class="lang-fr" style="display:none">Rocketry : propulsion, avionique, structures et récupération</li>
+        <li class="lang-en">CubeSat design, model-based engineering</li>
+        <li class="lang-fr" style="display:none">Conception de CubeSat, ingénierie à base de modèles</li>
+        <li class="lang-en">Technical research, data analysis &amp; stakeholder engagement</li>
+        <li class="lang-fr" style="display:none">Recherche technique, analyse de données et engagement des parties prenantes</li>
+      </ul>
     </div>
-    <div class="skills-group">
-      <h4>Languages</h4>
-      <div class="skill-chips">
-        <span class="chip">English (Native)</span>
-        <span class="chip">French (Native)</span>
-        <span class="chip">Spanish (Conversational)</span>
-      </div>
-    </div>
-  </section>
+
+  </div>
 
 </div>

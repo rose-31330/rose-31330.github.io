@@ -1,10 +1,11 @@
 ---
 layout: page
-title: Contact
+title: Resume & Contact
 permalink: /contact/
 ---
 
 <div class="contact-content">
+
   <p>
     I'm always happy to hear from fellow engineers, researchers, or anyone curious about
     aerospace, spacecraft systems, or remote sensing. Feel free to get in touch.
@@ -25,7 +26,6 @@ permalink: /contact/
     </div>
   </div>
 
-  <p style="margin-top: 2rem;">
-    <a href="/assets/cv/rose-carcaillet-cv.pdf" class="btn" download>Download CV</a>
-  </p>
+  <a href="/assets/cv/rose-carcaillet-cv.pdf" class="btn-cv-download" download>Download CV</a>
+
 </div>
