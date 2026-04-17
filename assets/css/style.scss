@@ -13,19 +13,19 @@ $illus-bar-color:  #e8c97a;  /* illustration caption bar colour — edit this */
 
 /* Colours — almost entirely monochrome; colour comes from images */
 
-$sidebar-bg:     #f3f0ec;   /* sidebar background */
-$sidebar-border: #272727;   /* sidebar dividing lines */
-$sidebar-text:   #111111;   /* sidebar text */
-$sidebar-sub:    #444444;   /* sidebar secondary text */
-$sidebar-muted:  #777777;   /* sidebar muted text */                                                    
-                                                                                                  
-$content-bg:     #f9f7f4;   /* main page background */                                            
-$content-border: #272727;   /* box borders */                                                     
-$panel-bg:       #f9f7f4;   /* inside the white boxes */                                          
-                                                                                                  
-$text:           #111111;   /* main body text */                                                  
-$text-mid:       #111111;   /* slightly lighter body text */                                      
-$text-muted:     #272727;   /* captions, metadata, list items */
+$sidebar-bg:     #161410;   /* sidebar background */
+$sidebar-border: #d4d0c8;   /* sidebar dividing lines */
+$sidebar-text:   #f0ece4;   /* sidebar text */
+$sidebar-sub:    #b0aca4;   /* sidebar secondary text */
+$sidebar-muted:  #787470;   /* sidebar muted text */
+
+$content-bg:     #0f0e0c;   /* main page background */
+$content-border: #d4d0c8;   /* box borders */
+$panel-bg:       #1a1816;   /* inside the boxes */
+
+$text:           #f0ece4;   /* main body text */
+$text-mid:       #dedad2;   /* slightly dimmer body text */
+$text-muted:     #aaa69e;   /* captions, metadata, list items */
 
 /* ============================================================
    Reset & Base
@@ -233,7 +233,7 @@ a {
   &.active {
     background: $sidebar-text;
     border-color: $sidebar-text;
-    color: #fff;
+    color: $content-bg;
   }
 }
 
@@ -318,11 +318,18 @@ a {
    ============================================================ */
 .illus-frame {
   display: flex;
+  flex-direction: column;
   min-height: 300px;
-  overflow: hidden;
+  border-bottom: 3px solid $illus-bar-color;
+
+  .illus-inner {
+    display: flex;
+    flex: 1;
+    min-height: 0;
+  }
 
   .illus-bar {
-    width: 24px;
+    width: 18px;
     flex-shrink: 0;
     background: $illus-bar-color;
     display: flex;
@@ -346,7 +353,7 @@ a {
     text-transform: uppercase;
   }
 
-  img {
+  .illus-inner img {
     flex: 1;
     min-width: 0;
     object-fit: cover;
@@ -653,7 +660,7 @@ a {
     color: $text;
     box-shadow: 0 0 4px rgba(180,140,60,0.3);
   }
-  &.active { background: $text; border-color: $text; color: #fff; }
+  &.active { background: $text; border-color: $text; color: $content-bg; }
 }
 
 /* ============================================================
@@ -959,7 +966,7 @@ a {
 .btn-cv-download {
   display: inline-block;
   background: $text;
-  color: #fff;
+  color: $content-bg;
   padding: 0.6rem 1.6rem;
   border: 1px solid $text;
   font-family: $font-mono;
@@ -969,8 +976,8 @@ a {
   margin-top: 1.5rem;
 
   &:hover {
-    background: #333;
-    color: #fff;
+    background: $text-mid;
+    color: $content-bg;
     box-shadow: 0 0 8px rgba(180,140,60,0.4);
     text-decoration: none;
   }
@@ -987,7 +994,7 @@ a {
   font-size: 0.8rem;
   text-decoration: none;
   transition: background 0.15s, color 0.15s;
-  &:hover { background: $text; color: #fff; text-decoration: none; }
+  &:hover { background: $text; color: $content-bg; text-decoration: none; }
 }
 
 /* ============================================================

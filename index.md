@@ -46,10 +46,12 @@ permalink: /
 
     <!-- Drop your image at assets/images/about.jpg to make this appear -->
     <div class="illus-frame">
-      <div class="illus-bar">
-        <span class="illus-caption">The Whirlpool Galaxy (M51) and companion galaxy</span>
+      <div class="illus-inner">
+        <div class="illus-bar">
+          <span class="illus-caption">The Whirlpool Galaxy (M51) and companion galaxy</span>
+        </div>
+        <img src="/assets/images/about.jpg" alt="Space illustration">
       </div>
-      <img src="/assets/images/about.jpg" alt="Space illustration">
     </div>
 
   </div>
