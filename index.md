@@ -17,7 +17,7 @@ permalink: /
     </div>
   </div>
 
-  <div class="two-col">
+  <div class="two-col" style="margin-bottom: 1.25rem;">
 
     <div class="panel panel-open">
       <p class="panel-title">
@@ -44,25 +44,33 @@ permalink: /
       </p>
     </div>
 
-    <div class="panel">
-      <p class="panel-title">
-        <span class="lang-en">Focus Areas</span>
-        <span class="lang-fr" style="display:none">Domaines de spécialisation</span>
-      </p>
-      <ul>
-        <li class="lang-en">Spacecraft systems engineering &amp; mission analysis</li>
-        <li class="lang-fr" style="display:none">Ingénierie des systèmes spatiaux et analyse de mission</li>
-        <li class="lang-en">GNSS-Reflectometry and remote sensing</li>
-        <li class="lang-fr" style="display:none">GNSS-Réflectométrie et télédétection</li>
-        <li class="lang-en">Rocketry: propulsion, avionics, structures &amp; recovery</li>
-        <li class="lang-fr" style="display:none">Rocketry : propulsion, avionique, structures et récupération</li>
-        <li class="lang-en">CubeSat design, model-based engineering</li>
-        <li class="lang-fr" style="display:none">Conception de CubeSat, ingénierie à base de modèles</li>
-        <li class="lang-en">Technical research, data analysis &amp; stakeholder engagement</li>
-        <li class="lang-fr" style="display:none">Recherche technique, analyse de données et engagement des parties prenantes</li>
-      </ul>
+    <!-- Drop your image at assets/images/about.jpg to make this appear -->
+    <div class="illus-frame">
+      <div class="illus-bar">
+        <span class="illus-caption">The Whirlpool Galaxy (M51) and companion galaxy</span>
+      </div>
+      <img src="/assets/images/about.jpg" alt="Space illustration">
     </div>
 
+  </div>
+
+  <div class="panel">
+    <p class="panel-title">
+      <span class="lang-en">Focus Areas</span>
+      <span class="lang-fr" style="display:none">Domaines de spécialisation</span>
+    </p>
+    <ul>
+      <li class="lang-en">Spacecraft systems engineering &amp; mission analysis</li>
+      <li class="lang-fr" style="display:none">Ingénierie des systèmes spatiaux et analyse de mission</li>
+      <li class="lang-en">GNSS-Reflectometry and remote sensing</li>
+      <li class="lang-fr" style="display:none">GNSS-Réflectométrie et télédétection</li>
+      <li class="lang-en">Rocketry: propulsion, avionics, structures &amp; recovery</li>
+      <li class="lang-fr" style="display:none">Rocketry : propulsion, avionique, structures et récupération</li>
+      <li class="lang-en">CubeSat design, model-based engineering</li>
+      <li class="lang-fr" style="display:none">Conception de CubeSat, ingénierie à base de modèles</li>
+      <li class="lang-en">Technical research, data analysis &amp; stakeholder engagement</li>
+      <li class="lang-fr" style="display:none">Recherche technique, analyse de données et engagement des parties prenantes</li>
+    </ul>
   </div>
 
 </div>

@@ -308,18 +308,57 @@ a {
 }
 
 /* ============================================================
-   Optional hero image area (About page, alongside panels)
+   Illustration frame — colour bar + image + rotated caption
+   Used on About page and anywhere else you drop an illustration.
+   Structure:
+     <div class="illus-frame">
+       <div class="illus-bar"><span class="illus-caption">Your caption</span></div>
+       <img src="..." alt="...">
+     </div>
    ============================================================ */
-.hero-img-wrap {
-  margin-bottom: 1.5rem;
+.illus-frame {
+  display: flex;
+  min-height: 300px;
+  overflow: hidden;
+
+  .illus-bar {
+    width: 24px;
+    flex-shrink: 0;
+    background: $illus-bar-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 0;
+  }
+
+  .illus-caption {
+    font-family: $font-mono;
+    font-size: 0.6rem;
+    font-weight: 400;
+    color: rgba(0,0,0,0.45);
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    letter-spacing: 0.12em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 100%;
+    text-transform: uppercase;
+  }
 
   img {
-    width: 100%;
-    max-height: 280px;
+    flex: 1;
+    min-width: 0;
     object-fit: cover;
-    border: 1px solid $content-border;
     display: block;
   }
+
+}
+
+/* Reusable anywhere — pairs with .illus-frame in a two-col or standalone */
+.illus-frame + .panel,
+.illus-frame ~ .panel {
+  margin-top: 0;
 }
 
 /* ============================================================
