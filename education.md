@@ -12,22 +12,30 @@ permalink: /education/
     <p class="edu-date">September 2023 – Present · Year 3 of 5</p>
     <p>
       Currently averaging 78%, on track for a First Class Honours. The integrated MEng combines
-      BEng and MEng-level content across five years, covering aerodynamics, propulsion, structures,
+      BEng and MEng-level content across four years, covering aerodynamics, propulsion, structures,
       systems engineering, and spacecraft design.
     </p>
     <ul>
-      <li>Year 2 Design Project: Conceptual design of a space station for In-orbit Servicing, Assembly &amp; Manufacturing (ISAM)</li>
-      <li>Selected for ESA CubeSat Concurrent Engineering Workshop at TU Berlin</li>
-      <li>Member of QMSEDS and active participant in ESA-sponsored research activities</li>
+      <li>Year 3 Design Project: Conceptual design of a space station for active debris removal, individual focus on space debris laser ranging based orbit determination and predictions</li>
+      <li>Member of QMSEDS and The Aurora Initiative, rocketry society</li>
     </ul>
   </div>
 
   <div class="edu-card">
     <h3>A-Levels</h3>
-    <p class="edu-inst">Placeholder — add your secondary school details here</p>
+    <p class="edu-inst">MPW London</p>
     <p class="edu-date">Graduated 2023</p>
     <ul>
-      <li>Add your A-level subjects and grades here</li>
+      <li>Biology A, Physics A, Chemistry A</li>
+    </ul>
+  </div>
+  
+  <div class="edu-card">
+    <h3>French Baccalauréat</h3>
+    <p class="edu-inst">Lycée Général et Technologique Nelson Mandela, Pibrac</p>
+    <p class="edu-date">Graduated 2022</p>
+    <ul>
+      <li>18.48/20 overall, 20/20 Maths, 20/20 Physics-Chemistry</li>
     </ul>
   </div>
 

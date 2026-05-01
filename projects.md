@@ -61,14 +61,14 @@ permalink: /projects/
     <div class="project-card" data-tags="coursework team-project">
       <div class="project-body">
         <div class="project-header">
-          <h2>Space Station Design for ISAM</h2>
+          <h2>Space Station Design for ADR - SDLR Orbit Determination and Prediction</h2>
           <div class="tag-group">
             <span class="project-tag">Coursework</span>
             <span class="project-tag">Team Project</span>
           </div>
         </div>
-        <p class="project-meta">2024–2025 · QMUL Year 2 Design Project</p>
-        <p>Year-long conceptual design of a space station for In-orbit Servicing, Assembly, and Manufacturing (ISAM). Applied aerospace design principles and systems-level thinking across a multidisciplinary team.</p>
+        <p class="project-meta">2025–2026 · QMUL Year 3 Design Project</p>
+        <p>Year-long conceptual design of a space station for scalable active debris removal. Applied aerospace design principles and systems-level thinking across a multidisciplinary team. Individual design project focus: Improving orbit determination and prediction of space debris using Space Debris Laser Ranging (SDLR) with data sourced from ESA</p>
       </div>
     </div>
 
