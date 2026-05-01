@@ -26,7 +26,7 @@ permalink: /
       </p>
       <p class="lang-en">
         Third-year integrated MEng Aerospace Engineering student at Queen Mary University of London,
-        averaging 78% and on track for a First. French-British, fully fluent in English and French,
+        on track for a First. French-British, fully fluent in English and French,
         with conversational Spanish.
       </p>
       <p class="lang-fr" style="display:none">
