@@ -21,8 +21,9 @@ permalink: /contact/
       <a href="https://www.linkedin.com/in/rcarc" target="_blank" rel="noopener">linkedin.com/in/rcarc</a>
     </div>
     <div class="contact-item">
-      <strong>University</strong>
-      <span>Queen Mary University of London — School of Engineering and Materials Science</span>
+      <strong>Education</strong>
+      <span>BEng (Hons) Aerospace Engineering — Queen Mary University of London (2023–2026, First Class)<br>
+      Incoming MSc Advanced Aeronautical Engineering — Imperial College London (2026–2027)</span>
     </div>
   </div>
 

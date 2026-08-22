@@ -7,17 +7,24 @@ permalink: /education/
 <div class="education-list">
 
   <div class="edu-card">
-    <h3>MEng Aerospace Engineering (Integrated)</h3>
+    <h3>MSc Advanced Aeronautical Engineering</h3>
+    <p class="edu-inst">Imperial College London</p>
+    <p class="edu-date">September 2026 – 2027</p>
+  </div>
+
+  <div class="edu-card">
+    <h3>BEng (Hons) Aerospace Engineering — First Class (78.2%)</h3>
     <p class="edu-inst">Queen Mary University of London</p>
-    <p class="edu-date">September 2023 – Present · Year 3 of 5</p>
+    <p class="edu-date">September 2023 – June 2026</p>
     <p>
-      Currently averaging 78%, on track for a First Class Honours. The integrated MEng combines
-      BEng and MEng-level content across four years, covering aerodynamics, propulsion, structures,
+      Graduated First Class with Honours (78.2%). Covered aerodynamics, propulsion, structures,
       systems engineering, and spacecraft design.
     </p>
     <ul>
-      <li>Year 3 Design Project: Conceptual design of a space station for active debris removal, individual focus on space debris laser ranging based orbit determination and predictions</li>
-      <li>Member of QMSEDS and The Aurora Initiative, rocketry society</li>
+      <li>BEng Dissertation: Improving Space Debris Orbit Prediction Using Space Debris Laser Ranging (SDLR) — achieved orbit fit improvements of 18–163× over TLE propagation during training, and up to 617× during validation</li>
+      <li>Year 3 Group Design Project: Conceptual design of a space station for active debris removal (ARMA concept)</li>
+      <li>Recipient of the Coachmakers' University Scholarship Award (June 2026) — competitive, interview-based aerospace engineering scholarship awarded by the Worshipful Company of Coachmakers</li>
+      <li>Member of QMSEDS and The Aurora Initiative rocketry society</li>
     </ul>
   </div>
 

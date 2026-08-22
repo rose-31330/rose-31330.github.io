@@ -15,7 +15,11 @@ permalink: /skills/
       <span class="chip">SOLIDWORKS</span>
       <span class="chip">Creo by PTC</span>
       <span class="chip">OpenRocket</span>
+      <span class="chip">GMAT</span>
+      <span class="chip">Orekit</span>
+      <span class="chip">StarCCM+</span>
       <span class="chip">COMET</span>
+      <span class="chip">Power BI</span>
     </div>
   </div>
 

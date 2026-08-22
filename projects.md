@@ -26,13 +26,13 @@ permalink: /projects/
             <span class="project-tag">Team Project</span>
           </div>
         </div>
-        <p class="project-meta">July 2025 – Present · QMUL Students for the Exploration and Development of Space</p>
-        <p>Leading a team of 12 students to design, build, and launch a mid-power rocket to a target altitude with a unique payload, under strict competition guidelines.</p>
+        <p class="project-meta">September 2025 – June 2026 · QMUL Students for the Exploration and Development of Space</p>
+        <p>Lead a team of 11 students to design, build, and launch a mid-power rocket to a target altitude with a unique payload, under strict competition guidelines.</p>
         <ul>
           <li>Applied systems engineering to integrate propulsion, avionics, structures, and recovery subsystems</li>
+          <li>Designed a PCB for flight monitoring and data output</li>
           <li>Overseeing full-cycle development: component selection, modelling, assembly, testing, and simulation</li>
           <li>Tools: Python, OpenRocket</li>
-          <li>Managing outreach for QMSEDS including social media and conference events</li>
         </ul>
       </div>
     </div>
@@ -58,17 +58,29 @@ permalink: /projects/
       </div>
     </div>
 
-    <div class="project-card" data-tags="coursework team-project">
+    <div class="project-card" id="sdlr-orbit-determination" data-tags="research coursework individual-project team-project">
       <div class="project-body">
         <div class="project-header">
-          <h2>Space Station Design for ADR - SDLR Orbit Determination and Prediction</h2>
+          <h2>BEng Dissertation — Improving Space Debris Orbit Prediction via SDLR</h2>
           <div class="tag-group">
-            <span class="project-tag">Coursework</span>
-            <span class="project-tag">Team Project</span>
+            <span class="project-tag">Research</span>
+            <span class="project-tag">Individual</span>
           </div>
         </div>
-        <p class="project-meta">2025–2026 · QMUL Year 3 Design Project</p>
-        <p>Year-long conceptual design of a space station for scalable active debris removal. Applied aerospace design principles and systems-level thinking across a multidisciplinary team. Individual design project focus: Improving orbit determination and prediction of space debris using Space Debris Laser Ranging (SDLR) with data sourced from ESA</p>
+        <p class="project-meta">April 2026 · BEng Dissertation, QMUL · Group context: Space Station Design for Active Debris Removal (ARMA)</p>
+        <p>
+          Investigated orbit determination (OD) for uncooperative LEO debris via single-station Space Debris
+          Laser Ranging (SDLR), applying batch least-squares estimation in Python (Orekit) across two objects
+          of contrasting eccentricity. Inspired by the first ESA-sponsored Space Debris Hackathon at
+          Technische Universität Berlin; retained dataset access in partnership with DiGOS Potsdam GmbH.
+        </p>
+        <ul>
+          <li><strong>18–163× orbit fit improvement</strong> during training and <strong>up to 617× during validation</strong> over conventional Two-Line Element (TLE) propagation — demonstrating operationally significant gains in debris position knowledge</li>
+          <li>Full force modelling: EGM96 gravity, NRLMSISE-00 atmospheric drag, solar radiation pressure, third-body perturbations, GCRF/ITRF frame transformations</li>
+          <li>Compared fixed vs. estimated atmospheric drag coefficient (C<sub>D</sub>) configurations — found eccentricity governs estimation viability: beneficial for near-circular orbits, degrading medium-term prediction for eccentric debris</li>
+          <li>Quantified the drag/along-track observability trade-off; proposed eccentricity-dependent and multi-station tracking strategies for the ARMA active debris removal concept</li>
+        </ul>
+        <p><a href="/assets/dissertation.pdf" class="project-link">Full dissertation (PDF)</a></p>
       </div>
     </div>
 
