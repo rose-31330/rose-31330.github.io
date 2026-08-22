@@ -9,7 +9,7 @@ permalink: /
   <div class="home-hero">
     <div class="hero-left">
       <h1>Rose Carcaillet</h1>
-      <p class="tagline">Aerospace Engineering Graduate · BEng QMUL · Incoming MSc Imperial College London</p>
+      <p class="tagline">Aerospace Engineering Graduate · BEng QMUL · MSc Imperial College London</p>
     </div>
     <div class="hero-right">
       <span class="lang-en">London, UK</span>
@@ -27,7 +27,7 @@ permalink: /
       <p class="lang-en">
         BEng (Hons) Aerospace Engineering graduate, First Class (78.2%), Queen Mary University of London.
         Incoming MSc Advanced Aeronautical Engineering student at Imperial College London, starting September 2026.
-        French-British, fully fluent in English and French, with conversational Spanish.
+        French-British.
       </p>
       <p class="lang-fr" style="display:none">
         Diplômée en génie aérospatial (BEng, mention très bien, 78,2 %), Queen Mary University of London.
@@ -36,8 +36,7 @@ permalink: /
         conversationnel en espagnol.
       </p>
       <p class="lang-en">
-        Interests at the intersection of spacecraft systems, mission analysis, and remote sensing —
-        with hands-on experience in technical research, systems engineering, and data analysis.
+        Interests in spacecraft systems, mission analysis, and remote sensing.
         Alongside this, independently engaging with questions around AI safety and governance
         as they apply to space infrastructure.
       </p>
@@ -89,11 +88,11 @@ permalink: /
     </p>
     <p class="lang-en">
       Selected as one of 30 participants (from 350+ applicants) for
-      <strong>Invisible College</strong> — a week-long residential seminar in Cambridge run by
+      <strong>Invisible College</strong>, a week-long residential seminar in Cambridge run by
       <em>Works in Progress</em> magazine (August 2026), covering spatial economics, scientific
       progress, and AI. I'm exploring how questions in AI safety and governance intersect with
-      space infrastructure, alongside my core aerospace background — not a completed pivot, but
-      a genuine area of interest I'm developing.
+      space infrastructure, alongside my core aerospace background,
+      an area of interest I'm developing.
     </p>
     <p class="lang-fr" style="display:none">
       Sélectionnée parmi 30 participants (sur plus de 350 candidats) pour l'<strong>Invisible
